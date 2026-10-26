@@ -1,0 +1,91 @@
+:root {
+  --bg: #0b0d12;
+  --panel: #121620;
+  --text: #e7eaf1;
+  --muted: #a0a6b6;
+  --primary: #4f46e5;
+  --success: #16a34a;
+  --info: #0284c7;
+  --warning: #f59e0b;
+  --danger: #dc2626;
+  --border: #232838;
+}
+
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.row { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+.space { height: 12px; }
+.space-lg { height: 20px; }
+
+.btn {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.btn:disabled { opacity: 0.6; cursor: not-allowed; }
+.btn.secondary { background: #2b3347; }
+.btn.danger { background: var(--danger); }
+
+.input, .textarea, .select {
+  background: #0e121a;
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 10px 12px;
+  width: 100%;
+}
+.textarea { min-height: 96px; resize: vertical; }
+
+.grid { display: grid; grid-template-columns: 1fr; gap: 12px; }
+@media (min-width: 700px) { .grid-2 { grid-template-columns: 1fr 1fr; } }
+
+.badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+}
+.badge.todo { background: #1f2937; color: #cbd5e1; }
+.badge.in_progress { background: #0c4a6e; color: #bae6fd; }
+.badge.done { background: #14532d; color: #bbf7d0; }
+
+.table { width: 100%; border-collapse: collapse; }
+.table th, .table td { padding: 10px 8px; border-bottom: 1px solid var(--border); }
+.table th { color: var(--muted); text-align: left; font-weight: 600; }
+
+.notice {
+  background: #12202b;
+  border: 1px solid #1e3a8a;
+  color: #a5b4fc;
+  padding: 10px 12px;
+  border-radius: 10px;
+}
+.notice.error { background: #2a1216; border-color: #7f1d1d; color: #fecaca; }
+.notice.success { background: #112516; border-color: #14532d; color: #bbf7d0; }
+
+
